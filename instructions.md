@@ -65,6 +65,16 @@ Design and implement a program, substitution, that encrypts messages using a sub
 * Your program must preserve case: capitalized letters must remain capitalized letters; lowercase letters must remain lowercase letters.
 * After outputting ciphertext, you should print a newline. Your program should then exit by returning `0` from `main`.
 
+## Hints
 
+### How to convert your plaintext to a cipher text
+
+* You will need to convert your plaintext string to an array of individual letters (characters).
+
+### Tips when using the Scanner class
+
+* When using the Scanner class in Java, calling nextInt() to read an integer value leaves a newline character (\n) in the input stream. This newline character is not consumed by nextInt(), and if you immediately call nextLine() to read a string input, it will capture that newline character instead of the intended next input.
+    *   So, if you want to read a line of text immediately after reading an integer, you would need to call nextLine() twice - once to consume the leftover newline character and the next to actually read the next line of text.
+* Additionally nextInt() will throw a _InputMismatchException_ error and your program will exit.  So you will need to catch non-integer inputs before calling this method.
 
   
